@@ -27,8 +27,6 @@ function greet(name) {
   return "Hello " + name;
 }
 
-const uniqueId = Symbol("id");
-
 const bigNumber = 1234567890123456789012345678901234567890n;
 
 console.log(typeof firstName);   // string
@@ -39,5 +37,4 @@ console.log(typeof phoneNumber); // undefined
 console.log(typeof skills);      // object
 console.log(typeof user);        // object
 console.log(typeof greet);       // function
-console.log(typeof uniqueId);    // symbol
 console.log(typeof bigNumber);   // bigint
