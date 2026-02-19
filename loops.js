@@ -20,3 +20,16 @@ do {
     console.log("This runs at least once");
     x++;
 } while (x < 3);
+
+
+// infinite loop - Ending condition(always true) is missing 
+for(let i = 1 ; i <= 5 ; i--){
+    //code
+}
+
+for(let i = 1 ; i > 0 ; i++){
+    //code
+}
+for(let i = 1 ;   ;i++){
+
+}
