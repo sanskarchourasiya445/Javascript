@@ -33,3 +33,14 @@ for(let i = 1 ; i > 0 ; i++){
 for(let i = 1 ;   ;i++){
 
 }
+
+
+// nested loop
+for(let i = 1;i<4;i++){
+    console.log(`Outer loop - ${i}`);
+    for(let j = 1 ; j <= i ; j++){
+        console.log(j);
+    }
+}
+
+
