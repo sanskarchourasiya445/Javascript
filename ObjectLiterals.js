@@ -16,4 +16,5 @@ student['city']
 //Indore
 studant.age
 //20
-
+student
+//{name:'Sanskar',age:20,marks:94,city:'Indore'}
