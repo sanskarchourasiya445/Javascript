@@ -36,8 +36,3 @@ console.log(greaterThan30);
 //[40, 50]
 console.log(numbers.includes(25));
 //true
-
-console.log(numbers.includes(100));
-//false
-console.log(numbers.indexOf(30));
-//2
