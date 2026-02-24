@@ -16,13 +16,7 @@ console.log(numbers.length);
 for (let i = 0; i < numbers.length; i++) {
     console.log(numbers[i]);
 }
-/*
-10
-25
-30
-40
-50
-*/
+
 
 let fruits = ["Apple", "Banana", "Mango"];
 console.log(fruits);
