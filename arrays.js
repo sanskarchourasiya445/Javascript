@@ -18,10 +18,4 @@ for (let i = 0; i < numbers.length; i++) {
 }
 
 
-let fruits = ["Apple", "Banana", "Mango"];
-console.log(fruits);
-//["Apple", "Banana", "Mango"]
 
-let mixed = [1, "Hello", true, null];
-console.log(mixed);
-//[1, "Hello", true, null]
