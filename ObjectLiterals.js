@@ -66,13 +66,3 @@ const copy = { ...student };           // clone
 const updated = { ...student, city: "Mumbai" }; // add/override a field
 console.log(updated);
 
-// --- Shorthand property (when variable name = key name) ---
-const brand = "HP";
-const price = 60000;
-const newLaptop = { brand, price }; // same as { brand: brand, price: price }
-console.log(newLaptop);
-
-// --- Optional Chaining (?.) ---
-// safely access nested values without crashing
-console.log(laptop.specs?.ram);     // "16GB"
-console.log(laptop.warranty?.year); // undefined (no error!)
