@@ -92,3 +92,26 @@ async function getMultiple() {
 
 getMultiple();
 
+
+// --- Promise.allSettled ---
+// like Promise.all but doesn't stop if one fails
+// useful when you want results from all, even if some fail
+
+async function tryAll() {
+  const results = await Promise.allSettled([
+    fetch("https://jsonplaceholder.typicode.com/users/1").then(r => r.json()),
+    fetch("https://bad-url-that-fails.com/data").then(r => r.json()),
+  ]);
+
+  results.forEach((result) => {
+    if (result.status === "fulfilled") {
+      console.log("Success:", result.value);
+    } else {
+      console.log("Failed:", result.reason.message);
+    }
+  });
+}
+
+tryAll();
+
+
