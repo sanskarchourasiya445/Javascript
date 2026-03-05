@@ -72,3 +72,21 @@ let found = numbers.find(function (num) {
 });
 console.log("First > 30:", found);
 
+// findIndex() – index of first match
+let foundIndex = numbers.findIndex(function (num) {
+  return num > 30;
+});
+console.log("Index of first > 30:", foundIndex);
+
+// some() – any match
+console.log("Any > 40:", numbers.some(num => num > 40));
+
+// every() – all match
+console.log("All > 5:", numbers.every(num => num > 5));
+
+// reduce() – sum of array
+let sum = numbers.reduce(function (acc, num) {
+  return acc + num;
+}, 0);
+console.log("Sum:", sum);
+
