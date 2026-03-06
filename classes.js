@@ -42,3 +42,13 @@ class Dog extends Animal {
 const dog = new Dog("Bruno");
 console.log(dog.speak());  // "Bruno says Woof"   (inherited from Animal)
 console.log(dog.fetch());  // "Bruno fetched the ball!" (Dog's own method)
+
+
+// --- Static Method ---
+// belongs to the class itself, not to any object
+
+class MathHelper {
+  static add(a, b) { return a + b; }
+}
+
+console.log(MathHelper.add(3, 5)); // 8
