@@ -1,8 +1,3 @@
-
-// ========================
-// ERROR HANDLING.JS
-// ========================
-
 // --- try / catch ---
 // try = run this code
 // catch = if it fails, do this instead
