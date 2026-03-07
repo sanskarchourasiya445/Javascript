@@ -49,3 +49,77 @@ console.log(num, typeof num);
 let score = 90;
 let scoreStr = score.toString();
 console.log(scoreStr, typeof scoreStr);
+
+
+
+/* A collection of useful JavaScript string functions
+ */
+
+/**
+ * Capitalize the first letter of a string
+ */
+function capitalizeFirstLetter(str) {
+    if (!str) return "";
+    return str.charAt(0).toUpperCase() + str.slice(1);
+}
+
+/**
+ * Reverse a string
+ */
+function reverseString(str) {
+    return str.split("").reverse().join("");
+}
+
+/**
+ * Check if a string is a palindrome
+ */
+function isPalindrome(str) {
+    const cleaned = str.toLowerCase().replace(/[^a-z0-9]/g, "");
+    return cleaned === cleaned.split("").reverse().join("");
+}
+
+/**
+ * Count number of words in a string
+ */
+function wordCount(str) {
+    if (!str.trim()) return 0;
+    return str.trim().split(/\s+/).length;
+}
+
+/**
+ * Convert string to camelCase
+ */
+function toCamelCase(str) {
+    return str
+        .toLowerCase()
+        .split(" ")
+        .map((word, index) =>
+            index === 0 ? word : word.charAt(0).toUpperCase() + word.slice(1)
+        )
+        .join("");
+}
+
+/**
+ * Truncate a string to a specific length
+ */
+function truncateString(str, length) {
+    if (str.length <= length) return str;
+    return str.slice(0, length) + "...";
+}
+
+/**
+ * Check if string contains a substring
+ */
+function containsSubstring(str, sub) {
+    return str.includes(sub);
+}
+
+module.exports = {
+    capitalizeFirstLetter,
+    reverseString,
+    isPalindrome,
+    wordCount,
+    toCamelCase,
+    truncateString,
+    containsSubstring
+};
