@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Welcome — Auth</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="card">
+  <div class="brand">✦ Luminary</div>
+
+  <!-- LOGIN PANEL -->
+  <div class="form-panel active" id="loginPanel">
+    <h1>Welcome back.</h1>
+    <p class="subtitle">Sign in to continue your journey.</p>
+
+    <div class="field">
+      <label for="l-identifier">Username/Gmail</label>
+      <input type="text" id="l-identifier" placeholder="yourname or you@gmail.com" autocomplete="username"/>
+    </div>
+    <div class="field">
+      <label for="l-password">Password</label>
+      <input type="password" id="l-password" placeholder="••••••••" autocomplete="current-password"/>
+    </div>
+
+    <div class="check-row">
+      <input type="checkbox" id="l-remember"/>
+      <label for="l-remember">Remember me &amp; agree to the <a href="#">Terms of Service</a></label>
+    </div>
+
+    <button class="btn" onclick="handleLogin()">Sign In</button>
+
+    <p class="switch-text">New account? <a onclick="switchTo('signup')">Sign Up →</a></p>
+  </div>
+
+  <!-- SIGNUP PANEL -->
+  <div class="form-panel" id="signupPanel">
+    <h1>Create account.</h1>
+    <p class="subtitle">Join us — it only takes a moment.</p>
+
+    <div class="field">
+      <label for="s-username">Username</label>
+      <input type="text" id="s-username" placeholder="yourname" autocomplete="username"/>
+    </div>
+    <div class="field">
+      <label for="s-email">Gmail</label>
+      <input type="email" id="s-email" placeholder="you@gmail.com" autocomplete="email"/>
+    </div>
+    <div class="field">
+      <label for="s-password">Password</label>
+      <input type="password" id="s-password" placeholder="Min. 8 characters" autocomplete="new-password"/>
+    </div>
+
+    <div class="check-row">
+      <input type="checkbox" id="s-agree"/>
+      <label for="s-agree">I agree to the <a href="#">Privacy Policy</a> &amp; <a href="#">Terms of Service</a></label>
+    </div>
+
+    <button class="btn" onclick="handleSignup()">Create Account</button>
+
+    <p class="switch-text">Already have an account? <a onclick="switchTo('login')">Login →</a></p>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
