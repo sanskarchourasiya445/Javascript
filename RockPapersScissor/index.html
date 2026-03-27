@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock Paper Scissors - Ultimate Edition</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="game-container">
+    <h1>🎮 Rock Paper Scissors</h1>
+    <div class="subtitle">Challenge the Computer!</div>
+
+    <div class="choices">
+      <div class="choice" id="rock">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%23FF6B6B'/%3E%3Ctext x='50' y='70' text-anchor='middle' font-size='40' fill='white'%3E✊%3C/text%3E%3C/svg%3E" alt="rock">
+      </div>
+      <div class="choice" id="paper">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%234ECDC4'/%3E%3Ctext x='50' y='70' text-anchor='middle' font-size='40' fill='white'%3E✋%3C/text%3E%3C/svg%3E" alt="paper">
+      </div>
+      <div class="choice" id="scissors">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%2395E1D3'/%3E%3Ctext x='50' y='70' text-anchor='middle' font-size='40' fill='white'%3E✌️%3C/text%3E%3C/svg%3E" alt="scissors">
+      </div>
+    </div>
+
+    <div class="game-status">
+      <div class="move-display">
+        <h3>Your Move</h3>
+        <div class="move-icon" id="user-move">❓</div>
+      </div>
+      <div class="vs">VS</div>
+      <div class="move-display">
+        <h3>Computer's Move</h3>
+        <div class="move-icon" id="comp-move">❓</div>
+      </div>
+    </div>
+
+    <div class="score-board">
+      <div class="score">
+        <p id="user-score">0</p>
+        <p>👤 You</p>
+      </div>
+      <div class="score">
+        <p id="comp-score">0</p>
+        <p>🤖 Computer</p>
+      </div>
+    </div>
+
+    <div class="msg-container">
+      <p id="msg">🎯 Make your move!</p>
+    </div>
+
+    <div class="controls">
+      <button class="reset-btn" onclick="resetGame()">🔄 Reset Game</button>
+      <button class="rules-btn" onclick="showRules()">📖 Game Rules</button>
+    </div>
+  </div>
+
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <h2>🎲 Game Rules</h2>
+      <ul>
+        <li>✊ Rock beats Scissors</li>
+        <li>✋ Paper beats Rock</li>
+        <li>✌️ Scissors beats Paper</li>
+        <li>Same choice results in a draw</li>
+      </ul>
+      <p>First to reach 10 points wins the match! 🏆</p>
+      <button class="close-modal" onclick="closeModal()">Got it!</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
